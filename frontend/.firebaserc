@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "vitrine-a4fbd": {
+      "hosting": {
+        "vitrine": [
+          "vitrine-a4fbd"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "vitrine-a4fbd"
+  }
+}

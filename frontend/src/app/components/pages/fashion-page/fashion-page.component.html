@@ -1,0 +1,30 @@
+<!--<app-header></app-header>-->
+<app-not-found [visible]="!fashion"
+notFoundMessage="Fashion Not Found"
+resetLinkText="Back To Homepage"
+></app-not-found>
+  <div *ngIf="fashion" class="container">
+    <img [src]="fashion.imageUrl" [alt]="fashion.name" >
+    <div class="details">
+      <div class="header">
+        <span class="name">{{fashion.name}}</span>
+        <span class="favorite {{fashion.favorite?'':'not'}}"> ♥ </span>
+        </div>                
+      <div class="description">
+        <span> {{fashion.description}}</span>
+      </div>
+      <div class="tags">
+         <a *ngFor="let tag of fashion.tags" routerLink="/tag/{{tag}}">
+           {{tag}}
+         </a>
+       </div> 
+      <div class="Price"> 
+        <span >{{fashion.price|currency}}</span><!--style="color: #262626;"-->
+      </div>
+      <div class="delivery">
+        <span>&#xf207;{{fashion.delivery}}</span>
+      </div>
+      
+      <button (click)="addToCart()">Add To Cart</button>                     
+    </div>
+ </div>

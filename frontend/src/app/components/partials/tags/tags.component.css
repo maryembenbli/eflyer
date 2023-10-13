@@ -1,0 +1,18 @@
+div{
+ /* display: flex;*/
+ display:inline-flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  margin-left: 30%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+}
+div a {
+  background-color:rgb(220, 169, 18);
+  padding:0.3rem 1rem;
+  margin: 0.2rem 0.15rem;
+  border-radius: 10rem;
+  font-weight: 600;
+  color: rgb(248, 232, 203);
+}

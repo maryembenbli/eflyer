@@ -1,0 +1,141 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<app-not-found [visible]="!fashions || !fashions.length"
+resetLinkText="Reset Search"
+></app-not-found>
+ <!-- fashion section start-->
+<div class="fashion_section">
+  <div id="main_slider" class="carousel slide" data-ride="carousel">
+     <div class="carousel-inner">
+        <div class="carousel-item active">
+           <div class="container">
+              <h1 class="fashion_taital">Man & Woman Fashion</h1>
+              <div class="fashion_section_2">
+                 <div class="row">
+                    <div class="col-lg-4 col-sm-4" *ngFor="let fashion of fashions">
+                       <div class="box_main">
+                          <a routerLink="/fashion/{{fashion.id}}">
+                         <h4 class="shirt_text">{{fashion.name}}</h4>
+                         <p class="price_text">Price  <span style="color: #262626;">{{fashion.price|currency}}</span></p>
+                         <div class="tshirt_img"><img [src]="fashion.imageUrl" [alt]="fashion.name" ></div>
+                         <span class="favorite {{fashion.favorite?'':'not'}}"> ♥ </span>
+                         <div class="stars">
+                           <div class="description">
+                              <span> {{fashion.description}}</span>
+                           </div>
+                           <div class="delivery">
+                              <span>{{fashion.delivery}}</span>
+                           </div>
+                          <!-- <star-rating></star-rating
+                          <h2>Angular Star Rating Example</h2>
+                          <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>>-->
+
+                         
+
+
+                         </div>
+                        </a>
+                          <div class="btn_main">
+                             <div class="buy_bt"><a href="#">Buy Now</a></div>
+                             <div class="seemore_bt"><a href="#">See More</a></div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="carousel-item">
+           <div class="container">
+              <h1 class="fashion_taital">Man & Woman Fashion</h1>
+              <div class="fashion_section_2">
+                 <div class="row">
+                    <div class="col-lg-4 col-sm-4">
+                       <div class="box_main">
+                          <h4 class="shirt_text">Man T -shirt</h4>
+                          <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                          <div class="tshirt_img"><img src="assets/images/tshirt-img.png"></div>
+                          <div class="btn_main">
+                             <div class="buy_bt"><a href="#">Buy Now</a></div>
+                             <div class="seemore_bt"><a href="#">See More</a></div>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-4">
+                       <div class="box_main">
+                          <h4 class="shirt_text">Man -shirt</h4>
+                          <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                          <div class="tshirt_img"><img src="assets/images/dress-shirt-img.png"></div>
+                          <div class="btn_main">
+                             <div class="buy_bt"><a href="#">Buy Now</a></div>
+                             <div class="seemore_bt"><a href="#">See More</a></div>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-4">
+                       <div class="box_main">
+                          <h4 class="shirt_text">Woman Scart</h4>
+                          <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                          <div class="tshirt_img"><img src="assets/images/women-clothes-img.png"></div>
+                          <div class="btn_main">
+                             <div class="buy_bt"><a href="#">Buy Now</a></div>
+                             <div class="seemore_bt"><a href="#">See More</a></div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="carousel-item">
+           <div class="container">
+              <h1 class="fashion_taital">Man & Woman Fashion</h1>
+              <div class="fashion_section_2">
+                 <div class="row">
+                    <div class="col-lg-4 col-sm-4">
+                       <div class="box_main">
+                          <h4 class="shirt_text">Man T -shirt</h4>
+                          <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                          <div class="tshirt_img"><img src="assets/images/tshirt-img.png"></div>
+                          <div class="btn_main">
+                             <div class="buy_bt"><a href="#">Buy Now</a></div>
+                             <div class="seemore_bt"><a href="#">See More</a></div>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-4">
+                       <div class="box_main">
+                          <h4 class="shirt_text">Man -shirt</h4>
+                          <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                          <div class="tshirt_img"><img src="assets/images/dress-shirt-img.png"></div>
+                          <div class="btn_main">
+                             <div class="buy_bt"><a href="#">Buy Now</a></div>
+                             <div class="seemore_bt"><a href="#">See More</a></div>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-4">
+                       <div class="box_main">
+                          <h4 class="shirt_text">Woman Scart</h4>
+                          <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                          <div class="tshirt_img"><img src="assets/images/women-clothes-img.png"></div>
+                          <div class="btn_main">
+                             <div class="buy_bt"><a href="#">Buy Now</a></div>
+                             <div class="seemore_bt"><a href="#">See More</a></div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+     <i class="fa fa-angle-left"></i>
+     </a>
+     <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+     <i class="fa fa-angle-right"></i>
+     </a>
+  </div>
+</div>
+ <!--fashion section end  -->

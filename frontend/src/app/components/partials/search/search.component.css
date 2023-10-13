@@ -1,0 +1,30 @@
+.menu-container {
+   position: relative;
+ /*  display: inline-block;*/
+ }
+ 
+ .menu {
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+ 
+   padding: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .menu-container:hover .menu {
+   display: block;
+ }
+ .menu a {
+   display: block;
+   padding: 8px 10px;
+ }
+ 
+ .menu a:hover {
+   background-color: #333;
+   color: #f0f0f0; /* Add this line to change the color on hover */
+ }
+ 
+ 
+ 
